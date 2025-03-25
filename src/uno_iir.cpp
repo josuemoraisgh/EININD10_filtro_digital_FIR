@@ -10,8 +10,8 @@
  #include "iir_filter.h"
  
  // Definição dos números de coeficientes para os filtros feedforward (b) e feedback (a)
- #define NB_COEFFS 3  ///< Número de coeficientes feedforward (numerador)
- #define NA_COEFFS 3  ///< Número de coeficientes feedback (denominador)
+ #define NB_COEFFS 11  ///< Número de coeficientes feedforward (numerador)
+ #define NA_COEFFS 11  ///< Número de coeficientes feedback (denominador)
  #define IIR_ORDER ((NB_COEFFS > NA_COEFFS ? NB_COEFFS : NA_COEFFS) - 1)// Ordem do filtro = max(NB_COEFFS, NA_COEFFS) - 1.
  #define pinANALOG A5 // Configura o pino de leitura
  
@@ -20,8 +20,8 @@
  
  // Exemplo de coeficientes para um filtro IIR (a[0] deve ser 1)
  // Estes coeficientes podem representar, por exemplo, um filtro passa-baixas
- static float bCoeffs[NB_COEFFS] = {0.2929f, 0.5858f, 0.2929f};
- static float aCoeffs[NA_COEFFS] = {1.0f, -0.0f, 0.1716f};
+ static float bCoeffs[NB_COEFFS] = {0.000000, 0.000001, 0.000006, 0.000016, 0.000027, 0.000033, 0.000027, 0.000016, 0.000006, 0.000001, 0.000000};
+ static float aCoeffs[NA_COEFFS] = {1.000000, -7.008953, 22.442455, -43.154416, 55.110002, -48.783641, 30.286436, -13.011204, 3.699269, -0.628169, 0.048354};
  
  // Vetor de estado para o filtro (tamanho = IIR_ORDER)
  static float iirState[IIR_ORDER];

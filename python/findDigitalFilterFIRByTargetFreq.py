@@ -97,7 +97,7 @@ if __name__ == '__main__':
     taps = findDigitalFilterFIRByTargetFreq(
         fDesejada=1000,     # Frequência alvo para rejeição ou passagem
         ordem=100,         # Ordem do filtro FIR
-        fs=10000,           # Frequência de amostragem
+        fs=15000,           # Frequência de amostragem
         filterType="lowpass",  # 'lowpass' ou 'highpass'
         desvio=0.05,
         isBP=True          # False = fDesejada está na banda de rejeição
