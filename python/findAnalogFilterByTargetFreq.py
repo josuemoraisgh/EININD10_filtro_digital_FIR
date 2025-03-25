@@ -45,6 +45,11 @@ def findAnalogFilterByTargetFreq(fDesejada, ordem, filterType, desvio, isBP):
     else:
         H = 1 / np.sqrt(1 + (omega_c / w)**(2 * ordem))
 
+    print("Frequência Desejada [Amarelo]:", fDesejada)
+    print("Frequência de Corte [Verde]:", fc_escolhido_hz)
+    print(("Limite da Banda de Passagem" if isBP else "Limite da Banda de Rejeição") + " [Vermelho]:", freq_limite)
+    print("Frequência Complementar (banda oposta) [Roxa]:", f_comp_hz)
+
     # Plotagem
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.plot(freqs, H, label='Resposta do Filtro Butterworth', color='blue')
@@ -62,11 +67,6 @@ def findAnalogFilterByTargetFreq(fDesejada, ordem, filterType, desvio, isBP):
     ax.legend()
     plt.tight_layout()
     plt.show()
-
-    print("Frequência Desejada [Amarelo]:", fDesejada)
-    print("Frequência de Corte [Verde]:", fc_escolhido_hz)
-    print(("Limite da Banda de Passagem" if isBP else "Limite da Banda de Rejeição") + " [Vermelho]:", freq_limite)
-    print("Frequência Complementar (banda oposta) [Roxa]:", f_comp_hz)
 
     return fc_escolhido_hz, freq_limite, f_comp_hz
 

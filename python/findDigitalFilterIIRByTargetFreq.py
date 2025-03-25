@@ -77,7 +77,7 @@ if __name__ == '__main__':
         fs=20000,               # Frequência de amostragem
         filterType='lowpass',   # 'lowpass' ou 'highpass'
         desvio=0.05,
-        isBP=False              # fDesejada está na banda de REJEIÇÃO
+        isBP=True              # fDesejada está na banda de REJEIÇÃO
     )
     print("\nCoeficientes do numerador (b):")
     print(", ".join(f"{coef:.6f}" for coef in b))
