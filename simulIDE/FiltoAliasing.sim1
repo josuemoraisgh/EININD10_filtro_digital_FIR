@@ -25,7 +25,7 @@
 <item itemtype="Oscope" CircId="Oscope-17" mainComp="false" Show_id="false" Show_Val="false" Pos="196,-148" rotation="0" hflip="1" vflip="1" label="Oscope-20" idLabPos="-80,-80" labelrot="0" valLabPos="0,0" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="118646853011" TimPos="2843325771,2843325771,2843325771,2843325771," VolDiv="0.540433,0.540433,0.540433,0.540433," Tunnels=",,,," Trigger="0" Filter="0.3 V" Trigger="0" AutoSC="4" Tracks="1" HideCh="false,true,false,false," VolPos="-0.0434641,-0.0434641,-0.0434641,-0.0434641," />
 
 <item itemtype="Subcircuit" CircId="Uno-11" mainComp="false" Show_id="true" Show_Val="false" Pos="-396,-284" rotation="0" hflip="1" vflip="1" label="Arduino Uno-1" idLabPos="91,-18" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="11_mega328-109" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0," SerialMon="-1" />
+<mainCompProps MainCompId="11_mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" eeprom="0,0,0,0,0,0,0,0," SerialMon="-1" />
 </item>
 
 <item itemtype="Resistor" CircId="Resistor-10" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="84,-292" rotation="0" hflip="1" vflip="1" label="Resistor-41" idLabPos="-12,-20" labelrot="0" valLabPos="-9,-18" valLabRot="0" Resistance="1 kΩ" />
@@ -62,7 +62,7 @@
 
 <item itemtype="Resistor" CircId="Resistor-152" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="204,-332" rotation="0" hflip="1" vflip="1" label="Resistor-152" idLabPos="-12,-20" labelrot="0" valLabPos="-7,-17" valLabRot="0" Resistance="30 kΩ" />
 
-<item itemtype="WaveGen" CircId="WaveGen-153" mainComp="false" Show_id="false" Show_Val="true" Pos="252,-332" rotation="0" hflip="-1" vflip="1" label="WaveGen-153" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Running="true" Wave_Type="Sine" Freq="30 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Bipolar="false" Floating="false" Semi_Ampli="1 V" Mid_Volt="0 V" />
+<item itemtype="WaveGen" CircId="WaveGen-153" mainComp="false" Show_id="false" Show_Val="true" Pos="256,-332" rotation="0" hflip="-1" vflip="1" label="WaveGen-153" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Running="true" Wave_Type="Sine" Freq="30 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Bipolar="false" Floating="false" Semi_Ampli="1 V" Mid_Volt="0 V" />
 
 <item itemtype="Node" CircId="Node-30" mainComp="false" Pos="176,-308" />
 
@@ -180,7 +180,7 @@
 
 <item itemtype="Connector" uid="Connector-153" startpinid="Node-151-1" endpinid="Uno-11-A5" pointList="-224,-268,-244,-268" />
 
-<item itemtype="Connector" uid="Connector-154" startpinid="WaveGen-153-outnod" endpinid="Resistor-152-rPin" pointList="236,-332,220,-332" />
+<item itemtype="Connector" uid="Connector-154" startpinid="WaveGen-153-outnod" endpinid="Resistor-152-rPin" pointList="240,-332,220,-332" />
 
 <item itemtype="Connector" uid="Connector-155" startpinid="Resistor-152-lPin" endpinid="Node-154-1" pointList="188,-332,176,-332" />
 

@@ -72,9 +72,9 @@ def findDigitalFilterIIRByTargetFreq(fDesejada, ordem, fs, filterType, desvio, i
 # Exemplo de uso:
 if __name__ == '__main__':
     b, a = findDigitalFilterIIRByTargetFreq(
-        fDesejada=1000,         # Frequência de interesse
+        fDesejada=100,         # Frequência de interesse
         ordem=10,
-        fs=15000,               # Frequência de amostragem
+        fs=1600,               # Frequência de amostragem
         filterType='lowpass',   # 'lowpass' ou 'highpass'
         desvio=0.05,
         isBP=True              # fDesejada está na banda de REJEIÇÃO

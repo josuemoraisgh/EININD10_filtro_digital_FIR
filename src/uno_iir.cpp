@@ -20,8 +20,8 @@
  
  // Exemplo de coeficientes para um filtro IIR (a[0] deve ser 1)
  // Estes coeficientes podem representar, por exemplo, um filtro passa-baixas
- static float bCoeffs[NB_COEFFS] = {0.000000, 0.000001, 0.000006, 0.000016, 0.000027, 0.000033, 0.000027, 0.000016, 0.000006, 0.000001, 0.000000};
- static float aCoeffs[NA_COEFFS] = {1.000000, -7.008953, 22.442455, -43.154416, 55.110002, -48.783641, 30.286436, -13.011204, 3.699269, -0.628169, 0.048354};
+ static float bCoeffs[NB_COEFFS] = {0.000000, 0.000001, 0.000003, 0.000009, 0.000016, 0.000019, 0.000016, 0.000009, 0.000003, 0.000001, 0.000000};
+ static float aCoeffs[NA_COEFFS] = {1.000000, -7.195702, 23.601485, -46.402544, 60.494341, -54.593176, 34.512482, -15.081737, 4.357580, -0.751330, 0.058678};
  
  // Vetor de estado para o filtro (tamanho = IIR_ORDER)
  static float iirState[IIR_ORDER];

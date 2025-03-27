@@ -72,7 +72,7 @@ def findAnalogFilterByTargetFreq(fDesejada, ordem, filterType, desvio, isBP):
 
 if __name__ == '__main__':
     fc, _, __ = findAnalogFilterByTargetFreq(
-        fDesejada=1000,      # Frequência desejada em Hz
+        fDesejada=100,      # Frequência desejada em Hz
         ordem=2,
         filterType='lowpass',
         desvio=0.05,
