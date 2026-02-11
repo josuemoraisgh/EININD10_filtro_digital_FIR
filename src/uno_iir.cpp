@@ -11,8 +11,8 @@
  #include "iir_filter.h"
  
  // Definição dos números de coeficientes para os filtros feedforward (b) e feedback (a)
- #define NB_COEFFS 11  ///< Número de coeficientes feedforward (numerador)
- #define NA_COEFFS 11  ///< Número de coeficientes feedback (denominador)
+ #define NB_COEFFS 11  ///< Número de coeficientes feedforward (numerador) + 1
+ #define NA_COEFFS 11  ///< Número de coeficientes feedback (denominador) + 1 
  #define IIR_ORDER ((NB_COEFFS > NA_COEFFS ? NB_COEFFS : NA_COEFFS) - 1)// Ordem do filtro = max(NB_COEFFS, NA_COEFFS) - 1.
  #define pinANALOG A5 // Configura o pino de leitura
  
