@@ -96,7 +96,7 @@ def findDigitalFilterFIRByTargetFreq(fDesejada, ordem, fs, filterType="lowpass",
 if __name__ == '__main__':
     taps = findDigitalFilterFIRByTargetFreq(
         fDesejada=28,     # Frequência alvo para rejeição ou passagem
-        ordem=11,         # Ordem do filtro FIR
+        ordem=58,         # Ordem do filtro FIR
         fs=100,           # Frequência de amostragem
         filterType="lowpass",  # 'lowpass' ou 'highpass'
         desvio=0.05,

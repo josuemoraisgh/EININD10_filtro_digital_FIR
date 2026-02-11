@@ -14,9 +14,9 @@ uint32_t timeDelayMS = 10;
 uint32_t expiresDelayMS = 0;
 
 
-#define NUM_COEFFS 11 ///< Número de coeficientes do filtro
+#define NUM_COEFFS 58 ///< Número de coeficientes do filtro
 // Coeficientes do filtro FIR (exemplo: filtro média móvel de 5 pontos)
-static float firCoeffs[NUM_COEFFS] = {-0.004678, -0.011138, 0.002427, 0.096975, 0.251133, 0.330564, 0.251133, 0.096975, 0.002427, -0.011138, -0.004678};// Buffer estático para armazenar as últimas amostras
+static float firCoeffs[NUM_COEFFS] = {0.000476, 0.000776, -0.000694, -0.000956, 0.001170, 0.001281, -0.002020, -0.001673, 0.003360, 0.002012, -0.005305, -0.002139, 0.007967, 0.001850, -0.011469, -0.000875, 0.015978, -0.001152, -0.021777, 0.004802, 0.029442, -0.011126, -0.040347, 0.022566, 0.058499, -0.047000, -0.101124, 0.134235, 0.463245, 0.463245, 0.134235, -0.101124, -0.047000, 0.058499, 0.022566, -0.040347, -0.011126, 0.029442, 0.004802, -0.021777, -0.001152, 0.015978, -0.000875, -0.011469, 0.001850, 0.007967, -0.002139, -0.005305, 0.002012, 0.003360, -0.001673, -0.002020, 0.001281, 0.001170, -0.000956, -0.000694, 0.000776, 0.000476};// Buffer estático para armazenar as últimas amostras
 static float firBuffer[NUM_COEFFS];
 // Estrutura que representa o filtro FIR
 static FIRFilter myFIRFilter;
