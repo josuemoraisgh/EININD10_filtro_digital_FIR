@@ -10,13 +10,13 @@
 #include "fir_filter.h"
 
 #define pinANALOG A5 // Configura o pino de leitura
-uint32_t timeDelayMS = 625;
+uint32_t timeDelayMS = 10;
 uint32_t expiresDelayMS = 0;
 
 
 #define NUM_COEFFS 11 ///< Número de coeficientes do filtro
 // Coeficientes do filtro FIR (exemplo: filtro média móvel de 5 pontos)
-static float firCoeffs[NUM_COEFFS] = {-0.00383703, -0.01252527, -0.00503055,  0.08976579,  0.25798701, 0.3472801 ,  0.25798701,  0.08976579, -0.00503055, -0.01252527, -0.00383703};// Buffer estático para armazenar as últimas amostras
+static float firCoeffs[NUM_COEFFS] = {-0.004678, -0.011138, 0.002427, 0.096975, 0.251133, 0.330564, 0.251133, 0.096975, 0.002427, -0.011138, -0.004678};// Buffer estático para armazenar as últimas amostras
 static float firBuffer[NUM_COEFFS];
 // Estrutura que representa o filtro FIR
 static FIRFilter myFIRFilter;
@@ -31,9 +31,9 @@ void setup()
 
 void loop()
 {
-  if ((micros() - expiresDelayMS) >= timeDelayMS)
+  if ((millis() - expiresDelayMS) >= timeDelayMS)
   {
-    expiresDelayMS = micros();
+    expiresDelayMS = millis();
     // Lê uma amostra do sensor (exemplo: sensor analógico) e normaliza o valor
     float inputSample = analogRead(pinANALOG) / 1023.0f;
     // Processa a amostra através do filtro FIR

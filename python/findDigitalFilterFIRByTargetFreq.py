@@ -95,12 +95,12 @@ def findDigitalFilterFIRByTargetFreq(fDesejada, ordem, fs, filterType="lowpass",
 # Exemplo de uso
 if __name__ == '__main__':
     taps = findDigitalFilterFIRByTargetFreq(
-        fDesejada=100,     # Frequência alvo para rejeição ou passagem
+        fDesejada=28,     # Frequência alvo para rejeição ou passagem
         ordem=11,         # Ordem do filtro FIR
-        fs=1600,           # Frequência de amostragem
+        fs=100,           # Frequência de amostragem
         filterType="lowpass",  # 'lowpass' ou 'highpass'
         desvio=0.05,
-        isBP=True          # False = fDesejada está na banda de rejeição
+        isBP=False          # False = fDesejada está na banda de rejeição
     )
 
     print("\nCoeficientes do filtro:")
